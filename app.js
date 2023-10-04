@@ -6,6 +6,8 @@ const request = require("request")
 
 const https = require('node:https')
 
+const PORT = "5800"
+
 
 
 app = express();
@@ -41,11 +43,11 @@ app.post("/", function(req, res ){
     const jsonData = JSON.stringify(data)
 
  
-    const url = "https://us21.api.mailchimp.com/3.0/lists/6cc3435f98"
+    const url = "https://us12.api.mailchimp.com/3.0/lists/9556c99682"
 
     const options = {
         method: "POST",
-        auth: "TechGuyNiran:11136c5869a55c08237e509800522c2c-us21"
+        auth: "niranblogspot:ca7bf7695f9e0669954357392cecd273-us12"
     }
 
 
@@ -84,6 +86,6 @@ app.get("/", function(req, res){
 })
 
 
-app.listen(proc.env.PORT || 5700, function(){
-    console.log("app started on port 5700...")
+app.listen(PORT, function(){
+    console.log("app started on port 5800...")
 })
